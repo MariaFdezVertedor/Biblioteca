@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration>
+	<session-factory>
+		<!-- Propiedades de conexión a la base de datos -->
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="hbm2ddl.auto">create</property>
+		<property name="connection.url">jdbc:mysql://localhost/bibliotecabbdd</property>
+		<property name="connection.username">root</property>	
+		<property name="connection.password">24658300</property>
+
+		<!-- Escaneo automático de clases de entidad -->
+		<property name="hibernate.archive.autodetection">class, hbm</property>
+		<property name="hibernate.autodetect.imports">true</property>
+
+		<!-- Paquete a escanear en busca de clases de entidad -->
+		<property name="hibernate.package_scan">Biblioteca</property>
+
+		<!-- Rutas de acceso a los archivos de mapeo XML -->
+		<mapping resource="Lector.hbm.xml"/>
+		<mapping resource="Libro.hbm.xml"/>
+		<mapping resource="Prestamo.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

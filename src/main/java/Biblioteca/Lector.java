@@ -1,0 +1,59 @@
+package Biblioteca;
+
+import javax.persistence.*;
+
+@Entity
+public class Lector {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idLector;
+    private String nombre;
+    private String apellido;
+    private String email;
+    
+    // Constructores, getters y setters
+    // Constructor vacío
+    public Lector() {
+    }
+    
+    // Constructor con todos los atributos
+    public Lector(String nombre, String apellido, String email) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+    }
+    
+    // Getters y setters
+    public Long getIdLector() {
+        return idLector;
+    }
+
+    public void setIdLector(Long idLector) {
+        this.idLector = idLector;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+}

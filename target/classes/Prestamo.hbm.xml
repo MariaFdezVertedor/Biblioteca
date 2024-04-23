@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Biblioteca.Prestamo" table="prestamo" catalog="bibliotecabbdd"> 
+        <id name="idPrestamo">
+            <column name="idPrestamo"/>
+            <generator class="increment"/>
+        </id>
+        <property name="fechaPrestamo"/>
+        <property name="fechaDevolucion"/>
+        <many-to-one name="libro" class="Biblioteca.Libro" column="idLibro"/>
+        <many-to-one name="lector" class="Biblioteca.Lector" column="idLector"/>
+    </class>
+</hibernate-mapping>

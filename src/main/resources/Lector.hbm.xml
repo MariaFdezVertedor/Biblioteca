@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Biblioteca.Lector" table="lector" catalog="bibliotecabbdd"> 
+        <id name="idLector">
+            <column name="idLector"/>
+            <generator class="increment"/>
+        </id>
+        <property name="nombre"/>
+        <property name="apellido"/>
+        <property name="email"/>
+    </class>
+</hibernate-mapping>
